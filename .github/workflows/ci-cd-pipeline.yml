@@ -22,9 +22,8 @@ jobs:
           pip install -r requirements.txt
       - name: Run tests
         run: |
-
-                  pytest ./test/test_train.py
-                  ls && pwd
+                  PYTHONPATH="$PYTHONPATH:$PWD"
+                  pytest test
       - name: Train model
         run: |
                   # Indentation fixed here (two spaces)
