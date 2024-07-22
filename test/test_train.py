@@ -1,6 +1,7 @@
 import joblib
 import os
-from ..train import train_and_save_model
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from train import train_and_save_model
 
 def test_train_and_save_model():
     # Train the model and save it
